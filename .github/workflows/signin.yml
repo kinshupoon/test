@@ -3,7 +3,8 @@ name: Aliyun Signin
 on:
   schedule:
    # 每天国际时间 17:00 运行一次, 中国时间 01:00
-    - cron: '40 14 * * *'
+    - cron: '22 16 * * *'
+    sleep $((RANDOM %600))
   workflow_dispatch:
 jobs:
   signin:
